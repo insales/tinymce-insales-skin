@@ -22,5 +22,9 @@ gulp.task('skins', ['less:modern'], function() {
         .pipe(gulp.dest(path.join(vendor, 'fonts', 'tinymce', 'skins')));
 });
 
+gulp.task('watch', ['skins'], function() {
+    gulp.watch('./src/skins/*/*.less', ['skins']);
+});
+
 gulp.task('default', ['skins']);
 
