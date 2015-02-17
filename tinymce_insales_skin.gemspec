@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'tinymce_insales_skin'
-  s.version = '0.1'
+  s.version = '0.2'
   s.authors = ["Insales"]
   s.summary = 'Insales skin for TinyMCE'
   s.files = Dir["vendor/**/*"]

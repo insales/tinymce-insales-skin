@@ -5,7 +5,6 @@ module TinymceInsalesSkin
         %w(stylesheets fonts images).each do |sub|
           app.config.assets.paths << root.join('vendor', 'assets', sub).to_s
         end
-        #app.config.assets.precompile << %r(bootstrap/glyphicons-halflings-regular\.(?:eot|svg|ttf|woff)$)
       end
     end
   end

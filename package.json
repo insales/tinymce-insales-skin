@@ -12,6 +12,7 @@
     "gulp": "^3.8.10",
     "gulp-less": "^2.0.1",
     "gulp-rename": "^1.2.0",
+    "gulp-rm": "^1.0.0",
     "less-plugin-clean-css": "^1.4.0"
   }
 }
