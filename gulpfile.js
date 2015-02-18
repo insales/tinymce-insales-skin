@@ -30,7 +30,14 @@ gulp.task('content', function() {
         .pipe(gulp.dest(dest));
 });
 
-gulp.task('skins', ['modern', 'content', 'static']);
+gulp.task('content-inline', function() {
+    gulp.src('./src/skins/*/Content.Inline.less')
+        .pipe(less({plugins: [cleancss]}))
+        .pipe(rename({ basename: 'content', extname: '.inline.min.css' }))
+        .pipe(gulp.dest(dest));
+});
+
+gulp.task('skins', ['modern', 'content', 'content-inline', 'static']);
 
 gulp.task('watch', ['skins'], function() {
     gulp.watch('./src/skins/*/*.less', ['skins']);
