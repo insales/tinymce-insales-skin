@@ -2,8 +2,8 @@ module TinymceInsalesSkin
   module Rails
     class Engine < ::Rails::Engine
       initializer 'tinymce_insales_skin.assets.precompile' do |app|
-        %w(stylesheets fonts images).each do |sub|
-          app.config.assets.paths << root.join('vendor', 'assets', sub).to_s
+        Dir.glob(root.join('vendor', 'assets', 'stylesheets', "**/*.css").to_s).each do |file|
+          app.config.assets.precompile << file
         end
       end
     end
